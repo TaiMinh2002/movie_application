@@ -14,6 +14,7 @@ Dio dio(Ref ref) {
       baseUrl: ApiConstants.tmdbBaseUrl,
       connectTimeout: const Duration(seconds: 10),
       receiveTimeout: const Duration(seconds: 15),
+      queryParameters: {'language': ApiConstants.tmdbLanguage},
       headers: {'Authorization': 'Bearer ${ApiConstants.tmdbToken}'},
     ),
   );

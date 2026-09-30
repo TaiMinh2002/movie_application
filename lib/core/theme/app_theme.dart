@@ -54,17 +54,19 @@ abstract final class AppTheme {
   );
 
   static final dark = _build(
-    ColorScheme.fromSeed(seedColor: _seed, brightness: Brightness.dark)
-        .copyWith(
-          primary: const Color(0xFFFB7185),
-          onPrimary: const Color(0xFF1A0509),
-          surface: const Color(0xFF0B1120),
-          onSurface: const Color(0xFFF1F5F9),
-          surfaceContainer: const Color(0xFF1E293B),
-          outline: const Color(0xFF334155),
-          error: const Color(0xFFF87171),
-          onError: const Color(0xFF1A0509),
-        ),
+    ColorScheme.fromSeed(
+      seedColor: _seed,
+      brightness: Brightness.dark,
+    ).copyWith(
+      primary: const Color(0xFFFB7185),
+      onPrimary: const Color(0xFF1A0509),
+      surface: const Color(0xFF0B1120),
+      onSurface: const Color(0xFFF1F5F9),
+      surfaceContainer: const Color(0xFF1E293B),
+      outline: const Color(0xFF334155),
+      error: const Color(0xFFF87171),
+      onError: const Color(0xFF1A0509),
+    ),
     AppColors.dark,
   );
 

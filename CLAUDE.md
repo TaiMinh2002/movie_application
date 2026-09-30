@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-A Flutter movie app (TMDB for movie data; Supabase for auth, watchlist and a realtime vote room). **Week 0 (base code) is done**: `lib/core/` (Dio/TMDB client, `Result`/`Failure`, theme, router, `AppErrorView`/`EmptyView`), l10n (vi + en), CI, and a placeholder Home screen. No feature exists yet; `plan.md` has the roadmap (week 1 = `movies`). The TMDB token comes from `--dart-define-from-file=tmdb.json` (copy `tmdb.example.json`; gitignored). The sibling project `../weather_application` (Skycast) is the reference for the base code (Riverpod, go_router, Dio, `Result<T>`/`Failure`, l10n, theme); copy its patterns instead of inventing new ones.
+A Flutter movie app (TMDB for movie data; Supabase for auth, watchlist and a realtime vote room). **Week 0 (base code) is done**: `lib/core/` (Dio/TMDB client, `Result`/`Failure`, theme, router, `AppErrorView`/`EmptyView`), l10n (vi + en), CI, and a placeholder Home screen. `features/movies/` has only the data + domain layers so far (TMDB datasource, DTOs, `MovieRepository`); no feature UI yet. `plan.md` has the roadmap. The TMDB token comes from `--dart-define-from-file=tmdb.json` (copy `tmdb.example.json`; gitignored). The sibling project `../weather_application` (Skycast) is the reference for the base code (Riverpod, go_router, Dio, `Result<T>`/`Failure`, l10n, theme); copy its patterns instead of inventing new ones.
 
 `rule.md` (Vietnamese) holds the coding rules. **Follow it strictly.** The user wrote these rules; they aren't generic advice. `README.md` has the planned features.
 
