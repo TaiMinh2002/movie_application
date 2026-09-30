@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-A Flutter movie app (TMDB for movie data; Supabase for auth, watchlist and a realtime vote room). **Only the `flutter create` scaffold exists so far**: `lib/main.dart` is the default counter demo and `test/widget_test.dart` tests it. Nothing from the planned architecture is built yet. The sibling project `../weather_application` (Skycast) is the reference for the base code (Riverpod, go_router, Dio, `Result<T>`/`Failure`, l10n, theme); copy its patterns instead of inventing new ones.
+A Flutter movie app (TMDB for movie data; Supabase for auth, watchlist and a realtime vote room). **Week 0 (base code) is done**: `lib/core/` (Dio/TMDB client, `Result`/`Failure`, theme, router, `AppErrorView`/`EmptyView`), l10n (vi + en), CI, and a placeholder Home screen. No feature exists yet; `plan.md` has the roadmap (week 1 = `movies`). The TMDB token comes from `--dart-define-from-file=tmdb.json` (copy `tmdb.example.json`; gitignored). The sibling project `../weather_application` (Skycast) is the reference for the base code (Riverpod, go_router, Dio, `Result<T>`/`Failure`, l10n, theme); copy its patterns instead of inventing new ones.
 
 `rule.md` (Vietnamese) holds the coding rules. **Follow it strictly.** The user wrote these rules; they aren't generic advice. `README.md` has the planned features.
 
@@ -12,13 +12,13 @@ A Flutter movie app (TMDB for movie data; Supabase for auth, watchlist and a rea
 
 ```bash
 flutter pub get
-dart run build_runner build --delete-conflicting-outputs   # after editing freezed / json / @riverpod code (once those packages are added)
-flutter gen-l10n                                           # after editing .arb files (once l10n is set up)
+dart run build_runner build --delete-conflicting-outputs   # after editing freezed / json / @riverpod code (freezed / json_serializable are not added yet)
+flutter gen-l10n                                           # after editing .arb files
 flutter analyze                                            # must be warning-free before commit
 flutter test                                               # all tests
 flutter test test/path/to_test.dart                        # single file
 flutter test --plain-name "test name"                      # single test by name
-flutter run
+flutter run --dart-define-from-file=tmdb.json
 ```
 
 Lint uses `flutter_lints`; `analysis_options.yaml` excludes the platform folders. Generated files (`*.g.dart`, `*.freezed.dart`, l10n) are not committed, so generate them after cloning.
