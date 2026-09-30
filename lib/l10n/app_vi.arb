@@ -1,0 +1,11 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Movie App",
+  "retry": "Thử lại",
+  "errorNetwork": "Không có kết nối mạng",
+  "errorServer": "Máy chủ đang gặp sự cố. Vui lòng thử lại sau",
+  "errorUnknown": "Đã có lỗi xảy ra",
+  "emptyDefault": "Chưa có gì ở đây",
+  "homeTitle": "Khám phá",
+  "homeComingSoon": "Phim sắp có mặt"
+}
