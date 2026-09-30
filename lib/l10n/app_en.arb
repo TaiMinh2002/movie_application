@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "appTitle": "Movie App",
+  "retry": "Retry",
+  "errorNetwork": "No internet connection",
+  "errorServer": "The server is having problems. Please try again later",
+  "errorUnknown": "Something went wrong",
+  "emptyDefault": "Nothing here yet",
+  "homeTitle": "Discover",
+  "homeComingSoon": "Movies are coming soon"
+}
