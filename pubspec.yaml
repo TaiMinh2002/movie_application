@@ -43,6 +43,8 @@ dependencies:
   material_symbols_icons: ^4.2960.0
   flutter_localizations:
     sdk: flutter
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.12.0
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +59,8 @@ dev_dependencies:
   riverpod_generator: ^4.0.9
   build_runner: ^2.16.1
   mocktail: ^1.0.5
+  freezed: ^4.0.2
+  json_serializable: ^6.14.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

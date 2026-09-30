@@ -9,8 +9,9 @@ void main() {
       isA<NetworkFailure>(),
     );
     expect(
-      ((await guard<int>(() => throw const ServerException(500))) as Err)
-          .failure,
+      ((await guard<int>(
+        () => throw const ServerException(500),
+      )) as Err).failure,
       isA<ServerFailure>(),
     );
     expect(
